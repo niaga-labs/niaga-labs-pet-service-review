@@ -55,17 +55,16 @@ func main() {
 		log.Fatal("failed to connect to database", zap.Error(err))
 	}
 
-	// Run database migrations
-	if cfg.AppEnv == "development" {
-		if err := db.AutoMigrate(&repository.ReviewModel{}); err != nil {
-			log.Fatal("failed to run auto-migration", zap.Error(err))
-		}
-		log.Info("database migration completed (dev auto-migrate)")
-	} else {
-		dbURL := dbConfig.DatabaseURL()
-		if err := database.RunMigrations(dbURL, "migrations", log); err != nil {
-			log.Fatal("failed to run migrations", zap.Error(err))
-		}
+	// Run database migrations.
+	//
+	// KPD-58: this used to AutoMigrate ReviewModel in development and call
+	// RunMigrations everywhere else -- but the repository had no migrations/
+	// directory, so every non-development boot died here. 001_create_reviews now
+	// owns the schema in every environment, including development, so dev and
+	// production can no longer drift apart.
+	dbURL := dbConfig.DatabaseURL()
+	if err := database.RunMigrations(dbURL, "migrations", log); err != nil {
+		log.Fatal("failed to run migrations", zap.Error(err))
 	}
 
 	// Initialize JWT manager
