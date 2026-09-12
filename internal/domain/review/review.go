@@ -83,13 +83,13 @@ func Reconstruct(id, bookingID, reviewerID, revieweeID uuid.UUID, revieweeType R
 }
 
 // Getters.
-func (r *Review) ID() uuid.UUID           { return r.id }
-func (r *Review) BookingID() uuid.UUID     { return r.bookingID }
-func (r *Review) ReviewerID() uuid.UUID    { return r.reviewerID }
-func (r *Review) RevieweeID() uuid.UUID    { return r.revieweeID }
+func (r *Review) ID() uuid.UUID              { return r.id }
+func (r *Review) BookingID() uuid.UUID       { return r.bookingID }
+func (r *Review) ReviewerID() uuid.UUID      { return r.reviewerID }
+func (r *Review) RevieweeID() uuid.UUID      { return r.revieweeID }
 func (r *Review) RevieweeType() RevieweeType { return r.revieweeType }
-func (r *Review) Rating() int              { return r.rating }
-func (r *Review) Comment() string          { return r.comment }
-func (r *Review) PhotoURLs() []string      { return r.photoURLs }
-func (r *Review) CreatedAt() time.Time     { return r.createdAt }
-func (r *Review) UpdatedAt() time.Time     { return r.updatedAt }
+func (r *Review) Rating() int                { return r.rating }
+func (r *Review) Comment() string            { return r.comment }
+func (r *Review) PhotoURLs() []string        { return r.photoURLs }
+func (r *Review) CreatedAt() time.Time       { return r.createdAt }
+func (r *Review) UpdatedAt() time.Time       { return r.updatedAt }
