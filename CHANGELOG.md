@@ -26,6 +26,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Go module path is now `github.com/niaga-labs/niaga-labs-pet-service-review` (was
+  `github.com/Kilat-Pet-Delivery/service-review`), and every import of lib-common and lib-proto follows. The repos moved to the niaga-labs org on
+  2026-09-12 (HQ-40). The `replace => ../lib-*` targets are unchanged: local folders keep their
+  short names. (HQ-41)
 - `cmd/server`: the development-only GORM `AutoMigrate` branch is gone. The SQL
   migrations now own the schema in every environment, so development can no
   longer drift from the rest. (KPD-58)

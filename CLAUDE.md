@@ -1,7 +1,7 @@
 # Kilat Pet Delivery - service-review
 
 Ratings and reviews for runners, shops and owners, with per-reviewee aggregates.
-Jira project **KPD** - GitHub `Kilat-Pet-Delivery/service-review` - stack **Go 1.24 - Gin - GORM - PostgreSQL - Kafka**. Global rules live in `~/.claude/`;
+Jira project **KPD** - GitHub `niaga-labs/niaga-labs-pet-service-review` - stack **Go 1.24 - Gin - GORM - PostgreSQL - Kafka**. Global rules live in `~/.claude/`;
 this file only adds what is specific here.
 
 ## Orient here first

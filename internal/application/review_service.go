@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Kilat-Pet-Delivery/lib-common/kafka"
-	reviewDomain "github.com/Kilat-Pet-Delivery/service-review/internal/domain/review"
 	"github.com/google/uuid"
+	"github.com/niaga-labs/niaga-labs-pet-lib-common/kafka"
+	reviewDomain "github.com/niaga-labs/niaga-labs-pet-service-review/internal/domain/review"
 	"go.uber.org/zap"
 )
 
