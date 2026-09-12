@@ -1,9 +1,9 @@
-module github.com/Kilat-Pet-Delivery/service-review
+module github.com/niaga-labs/niaga-labs-pet-service-review
 
 go 1.24.0
 
 require (
-	github.com/Kilat-Pet-Delivery/lib-common v0.0.0
+	github.com/niaga-labs/niaga-labs-pet-lib-common v0.0.0
 	github.com/gin-gonic/gin v1.11.0
 	github.com/google/uuid v1.6.0
 	go.uber.org/zap v1.27.1
@@ -69,4 +69,4 @@ require (
 	gorm.io/driver/postgres v1.6.0 // indirect
 )
 
-replace github.com/Kilat-Pet-Delivery/lib-common => ../lib-common
+replace github.com/niaga-labs/niaga-labs-pet-lib-common => ../lib-common

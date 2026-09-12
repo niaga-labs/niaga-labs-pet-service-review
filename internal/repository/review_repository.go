@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"time"
 
-	reviewDomain "github.com/Kilat-Pet-Delivery/service-review/internal/domain/review"
 	"github.com/google/uuid"
+	reviewDomain "github.com/niaga-labs/niaga-labs-pet-service-review/internal/domain/review"
 	"gorm.io/gorm"
 )
 
